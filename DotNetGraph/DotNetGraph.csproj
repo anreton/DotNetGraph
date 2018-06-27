@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0207686D-5B14-43F2-BE05-2A0E073B2C22}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anreton.DotNetGraph</RootNamespace>
+    <AssemblyName>DotNetGraph</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\Abstractions\GraphTraversalBase.cs" />
+    <Compile Include="Algorithms\Abstractions\IGraphTraversal.cs" />
+    <Compile Include="Algorithms\Abstractions\ISinglePairGraphPathfinding.cs" />
+    <Compile Include="Algorithms\Abstractions\ISingleSourceGraphPathfinding.cs" />
+    <Compile Include="Algorithms\Implementations\DepthFirstGraphPathfinding.cs" />
+    <Compile Include="Algorithms\Implementations\DijkstraGraphPathfinding.cs" />
+    <Compile Include="DataStructures\Abstractions\IPath.cs" />
+    <Compile Include="DataStructures\Abstractions\IPathSegment.cs" />
+    <Compile Include="DataStructures\Abstractions\PathSegmentBase.cs" />
+    <Compile Include="Algorithms\Abstractions\GraphPathfindingBase.cs" />
+    <Compile Include="Algorithms\Implementations\BreadthFirstGraphPathfinding.cs" />
+    <Compile Include="Algorithms\Implementations\BreadthFirstGraphTraversal.cs" />
+    <Compile Include="Algorithms\Implementations\DepthFirstGraphTraversal.cs" />
+    <Compile Include="DataStructures\Implementations\Path.cs" />
+    <Compile Include="DataStructures\Implementations\UnweightedPathSegment.cs" />
+    <Compile Include="DataStructures\Implementations\WeightedPathSegment.cs" />
+    <Compile Include="DataStructures\Abstractions\GraphBase.cs" />
+    <Compile Include="DataStructures\Abstractions\IDataEdge.cs" />
+    <Compile Include="DataStructures\Abstractions\IDataGraph.cs" />
+    <Compile Include="DataStructures\Abstractions\IEdge.cs" />
+    <Compile Include="DataStructures\Abstractions\IGraph.cs" />
+    <Compile Include="DataStructures\Abstractions\INode.cs" />
+    <Compile Include="DataStructures\Abstractions\IWeightedDataEdge.cs" />
+    <Compile Include="DataStructures\Abstractions\IWeightedEdge.cs" />
+    <Compile Include="DataStructures\Implementations\DataEdge.cs" />
+    <Compile Include="DataStructures\Implementations\DataGraph.cs" />
+    <Compile Include="DataStructures\Implementations\Edge.cs" />
+    <Compile Include="DataStructures\Implementations\Graph.cs" />
+    <Compile Include="DataStructures\Implementations\Node.cs" />
+    <Compile Include="DataStructures\Implementations\WeightedDataEdge.cs" />
+    <Compile Include="DataStructures\Implementations\WeightedEdge.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
